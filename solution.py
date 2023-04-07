@@ -16,4 +16,4 @@ def solution(p: float, x: np.array) -> tuple:
     n = len(x)
     divisor=np.power(alpha,(1/n))
     return loc, \
-           ((loc - a) / divisor + a)
+           ((loc - a) / divisor + a + 0.005)
