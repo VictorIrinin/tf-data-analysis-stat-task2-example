@@ -14,6 +14,5 @@ def solution(p: float, x: np.array) -> tuple:
     alpha = 1 - p
     loc = x.max()
     n = len(x)
-    divisor=np.power(alpha,(1/n))
-    return loc, \
-           ((loc - a) / divisor + a)
+    return ((loc - a) / np.quantile(x, (1 - alpha / 2)) + a), \
+           ((loc - a) / np.quantile(x, (alpha / 2)) + a)
